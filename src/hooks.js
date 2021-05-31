@@ -2,6 +2,7 @@ const path = require('path');
 const glob = require('glob');
 const fs = require('fs-extra');
 const fetch = require('node-fetch');
+const prettier = require("prettier");
 
 const hooks = [
   {
@@ -38,6 +39,15 @@ const hooks = [
         data:  { ...data, companies }
       }
     }
+  },
+  {
+    hook: 'html',
+    name: 'prettify HTML',
+    description: 'prettify HTML output',
+    run: ({ htmlString }) => {
+      return { htmlString: prettier.format(htmlString, {parser: 'html'})};
+    }
   }
 ];
+
 module.exports = hooks;

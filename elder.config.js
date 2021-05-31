@@ -24,6 +24,7 @@ module.exports = {
         theme: 'nord' // available themes: https://github.com/shikijs/shiki/blob/master/packages/themes/README.md#literal-values - try material-theme-darker
         // theme is the only option available - for now.
       },
+      useTableOfContents: true // adds tocTree to each route's frontmatter data object.
     },
     '@elderjs/plugin-browser-reload': {
       // this reloads your browser when nodemon restarts your server.
