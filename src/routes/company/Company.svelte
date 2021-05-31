@@ -1,6 +1,5 @@
 <script>
   export let data, helpers, requests, settings;
-  console.log(data.company);
 </script>
 
 <a href="/">&leftarrow; Home</a>
