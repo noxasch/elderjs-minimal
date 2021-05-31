@@ -1,5 +1,5 @@
 module.exports = {
-  origin: '', // TODO: update this.
+  origin: 'http://localhost:3000', // TODO: update this.
   lang: 'en',
   srcDir: 'src',
   distDir: 'public',
@@ -29,10 +29,10 @@ module.exports = {
       // this reloads your browser when nodemon restarts your server.
       port: 8080,
     },
-    '@elderjs/plugin-seo-check': {
-      display: ['errors', 'warnings'], // If the errors are too verbose remove 'warnings'
-      //writeLocation: './report.json', // if you want to write a report of errors
-    },
+    // '@elderjs/plugin-seo-check': {
+    //   display: ['errors', 'warnings'], // If the errors are too verbose remove 'warnings'
+    //   //writeLocation: './report.json', // if you want to write a report of errors
+    // },
   },
   shortcodes: { closePattern: '}}', openPattern: '{{' },
 };

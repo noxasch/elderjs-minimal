@@ -1,6 +1,7 @@
 const path = require('path');
 const glob = require('glob');
 const fs = require('fs-extra');
+const fetch = require('node-fetch');
 
 const hooks = [
   {
@@ -25,5 +26,18 @@ const hooks = [
       });
     },
   },
+  {
+    hook: 'bootstrap', // hook type
+    name: 'fetchCompanyData',
+    description: 'Fetch company data into data object to be available in all hooks and routes',
+    run: async ({ settings, data }) => {
+      const companyData = await fetch('https://opendata.arcgis.com/datasets/a4d813c396934fc09d0b801a0c491852_0.geojson')
+        .then((res) => res.json());
+      const companies = Object.values(companyData.features).map((entry) => entry.properties);
+      return {
+        data:  { ...data, companies }
+      }
+    }
+  }
 ];
 module.exports = hooks;
