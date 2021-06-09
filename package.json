@@ -1,7 +1,7 @@
 {
-  "name": "elderjs-minimaltemplate",
-  "version": "1.3.2",
-  "description": "This is a project template for [Elder.js](https://elderguide.com/tech/elderjs/) apps.",
+  "name": "elderjs-app",
+  "version": "1.0.20",
+  "private": true,
   "main": "./src/build.js",
   "scripts": {
     "start": "npm run dev",
@@ -62,10 +62,6 @@
     "index.js",
     "elderjs"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Elderjs/template.git"
-  },
   "keywords": [
     "svelte",
     "elderjs",
@@ -78,9 +74,5 @@
     "template",
     "partial",
     "hydration"
-  ],
-  "bugs": {
-    "url": "https://github.com/Elderjs/template/issues"
-  },
-  "homepage": "https://github.com/Elderjs/template#readme"
+  ]
 }
