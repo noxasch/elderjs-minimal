@@ -23,3 +23,13 @@ server.listen(SERVER_PORT, (err) => {
   }
   console.log(`> Elder.js running on http://localhost:${SERVER_PORT}`);
 });
+
+process.on('SIGINT', () => {
+  console.info('SIGINT signal received.');
+  server.server.close((err) => {
+    console.log('Error: ', err.message);
+  })
+  console.log('Elderjs server close.');
+  process.exit();
+});
+
